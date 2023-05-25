@@ -66,7 +66,7 @@ def start():
                         cv2.rectangle(image, r[:2], r[2:], (0, 255, 0), 2) # draw boxes on img
                         cv2.putText(image, LABELS[int(pred[5])], (r[0] + 3, r[3] + 14), cv2.FONT_HERSHEY_DUPLEX, 0.75, (0, 255, 0), 1)
                 
-                con.image(image, channels="BGR")
+                con.image(image, channels="RGB")
         except AttributeError:
             st.error("Please upload an image.")
         except:
